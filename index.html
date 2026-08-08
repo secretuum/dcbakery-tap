@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DC Bakery — B2B-поставки для заведений · Алматы</title>
+<meta name="description" content="DC Bakery by del Cappuccino — оптовые поставки десертов, выпечки, полуфабрикатов и мяса (халал) для кофеен, ресторанов, отелей и магазинов. Алматы и Казахстан.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/icon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tap.dc-bakery.kz/">
+<meta property="og:title" content="DC Bakery — B2B-поставки для заведений">
+<meta property="og:description" content="Десерты, выпечка, полуфабрикаты и мясо (халал) оптом для кофеен, ресторанов и магазинов. Алматы и Казахстан.">
+<meta property="og:image" content="https://tap.dc-bakery.kz/assets/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --berry:#A31E72; --berry-dk:#7C1656; --berry-2:#C23A90;
+  --coral:#F1968D; --coral-soft:#F9CFC8; --coral-dk:#E37A70;
+  --cream:#FFF6F2; --cream-2:#FBE7E0; --surface:#FFFFFF;
+  --ink:#2B1A24; --ink-2:#7A5E6B; --line:rgba(163,30,114,.14);
+  --wa:#25D366; --wa-dk:#1EBE5A;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--cream);color:var(--ink);
+  font-family:Montserrat,-apple-system,sans-serif;
+  -webkit-font-smoothing:antialiased;line-height:1.5;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:480px;margin:0 auto;padding:0 20px 48px}
+
+/* ── HERO ──────────────────────────────── */
+.hero{position:relative;text-align:center;padding:34px 0 8px}
+.hero::before{
+  content:'';position:absolute;top:-40px;left:50%;transform:translateX(-50%);
+  width:340px;height:340px;border-radius:50%;
+  background:radial-gradient(circle, rgba(241,150,141,.45), rgba(241,150,141,0) 70%);
+  z-index:0;pointer-events:none;
+}
+.hero > *{position:relative;z-index:1}
+.logo{width:150px;height:auto;margin:0 auto 6px;display:block}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--berry);background:var(--cream-2);border:1px solid var(--line);
+  padding:6px 13px;border-radius:99px;margin-bottom:14px;
+}
+.eyebrow .dot{width:6px;height:6px;border-radius:99px;background:var(--coral)}
+h1{font-size:24px;font-weight:800;line-height:1.18;letter-spacing:-.01em;color:var(--berry-dk);margin-bottom:10px}
+.lead{font-size:14px;color:var(--ink-2);line-height:1.6;max-width:400px;margin:0 auto}
+
+/* ── STATS ─────────────────────────────── */
+.stats{display:flex;gap:8px;margin:20px 0 4px}
+.stat{flex:1;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 8px;text-align:center}
+.stat b{display:block;font-size:17px;font-weight:800;color:var(--berry);line-height:1}
+.stat span{display:block;font-size:10px;color:var(--ink-2);margin-top:5px;font-weight:500;line-height:1.3}
+
+/* ── LINK BUTTONS ──────────────────────── */
+.links{display:flex;flex-direction:column;gap:12px;margin-top:22px}
+.link{
+  display:flex;align-items:center;gap:14px;
+  background:var(--surface);border:1px solid var(--line);border-radius:16px;
+  padding:15px 16px;transition:transform .14s, box-shadow .14s, background .14s;
+}
+.link:hover{transform:translateY(-2px);box-shadow:0 14px 30px -16px rgba(124,22,86,.5)}
+.link .ic{width:42px;height:42px;border-radius:12px;flex:none;display:flex;align-items:center;justify-content:center}
+.link .ic svg{width:22px;height:22px}
+.link .tx{flex:1;min-width:0}
+.link .tx b{display:block;font-size:15px;font-weight:700;line-height:1.2}
+.link .tx span{display:block;font-size:12px;margin-top:2px;opacity:.72;font-weight:500}
+.link .chev{flex:none;opacity:.5}
+.link .chev svg{width:18px;height:18px;display:block}
+
+.link.primary{background:var(--berry);border-color:var(--berry);color:#fff}
+.link.primary .ic{background:rgba(255,255,255,.16)}
+.link.primary:hover{background:var(--berry-dk)}
+.link.wa{background:var(--wa);border-color:var(--wa);color:#fff}
+.link.wa .ic{background:rgba(255,255,255,.2)}
+.link.wa:hover{background:var(--wa-dk)}
+.link.ghost .ic{background:var(--coral-soft);color:var(--berry)}
+.link.ghost .tx b{color:var(--ink)}
+
+/* ── SECTION ───────────────────────────── */
+.sec{margin-top:34px}
+.sec-eyebrow{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--coral-dk);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.sec-eyebrow::before{content:'';width:16px;height:2px;background:var(--coral);border-radius:2px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px}
+.card h2{font-size:18px;font-weight:800;color:var(--berry-dk);line-height:1.2;margin-bottom:10px}
+.card p{font-size:13.5px;color:var(--ink-2);line-height:1.6}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;color:var(--berry);background:var(--cream-2);border:1px solid var(--line);border-radius:99px;padding:7px 12px}
+.chip svg{width:13px;height:13px}
+
+/* ── GALLERY ───────────────────────────── */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}
+.gallery img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px;display:block;border:1px solid var(--line)}
+
+/* ── SUPPLY LIST ───────────────────────── */
+.supply{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.supply div{display:flex;align-items:center;gap:9px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;font-size:13px;font-weight:600}
+.supply .em{font-size:17px;line-height:1}
+
+/* ── CONTACTS ──────────────────────────── */
+.contacts{display:flex;flex-direction:column}
+.crow{display:flex;align-items:center;gap:13px;padding:13px 0;border-top:1px solid var(--line)}
+.crow:first-child{border-top:0}
+.crow .ci{width:34px;height:34px;border-radius:10px;flex:none;display:flex;align-items:center;justify-content:center;background:var(--cream-2);color:var(--berry)}
+.crow .ci svg{width:17px;height:17px}
+.crow .cc{flex:1;min-width:0}
+.crow .cc small{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--coral-dk);font-weight:700}
+.crow .cc b{font-size:13.5px;font-weight:600;word-break:break-word}
+.crow .cc a{color:var(--berry);font-weight:700}
+
+.delivery{margin-top:14px;background:var(--cream-2);border-radius:14px;padding:14px 16px;font-size:12.5px;color:var(--ink-2);line-height:1.6}
+.delivery b{color:var(--berry-dk)}
+
+/* ── FOOTER ────────────────────────────── */
+footer{text-align:center;margin-top:34px;font-size:11.5px;color:var(--ink-2);line-height:1.7}
+footer .fl{color:var(--berry);font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <img class="logo" src="assets/logo.png" alt="DC Bakery by del Cappuccino">
+    <div class="eyebrow"><span class="dot"></span> B2B-поставки · Алматы</div>
+    <h1>Оптовая пекарня<br>для кофеен и ресторанов</h1>
+    <p class="lead">Десерты, выпечка, полуфабрикаты и мясо халал — собственное производство. Доставка по Алматы и Казахстану.</p>
+
+    <div class="stats">
+      <div class="stat"><b>50+</b><span>партнёров в РК</span></div>
+      <div class="stat"><b>Халал</b><span>мясная линейка</span></div>
+      <div class="stat"><b>100%</b><span>своё производство</span></div>
+    </div>
+  </header>
+
+  <!-- ── ГЛАВНЫЕ ДЕЙСТВИЯ ── -->
+  <nav class="links">
+    <a class="link primary" href="https://dc-bakery.kz" target="_blank" rel="noopener">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span>
+      <span class="tx"><b>Сайт и каталог</b><span>Оптовые цены, остатки, заказ онлайн</span></span>
+      <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span>
+    </a>
+
+    <a class="link wa" href="https://wa.me/77477272650?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%B8%D1%88%D1%83%20%D0%B8%D0%B7%20Instagram%20%E2%80%94%20%D1%85%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%20%D0%BE%D0%BF%D1%82%D0%BE%D0%B2%D1%8B%D0%B5%20%D0%BF%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B8%20DC%20Bakery." target="_blank" rel="noopener">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.6.2-.2.3-.7.9-.9 1.1-.1.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.2.2 2 3.1 5 4.3.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.3z"/><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2zm0 18.3c-1.5 0-3-.4-4.3-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.3 8.3 0 1 1 12 20.3z"/></svg></span>
+      <span class="tx"><b>Написать в WhatsApp</b><span>Заказ и вопросы менеджеру</span></span>
+      <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span>
+    </a>
+
+    <a class="link ghost" href="tel:+77476940766">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+      <span class="tx"><b>Позвонить</b><span>+7 747 694 07 66</span></span>
+      <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span>
+    </a>
+
+    <a class="link ghost" href="https://www.instagram.com/bakery.dc" target="_blank" rel="noopener">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+      <span class="tx"><b>Instagram</b><span>@bakery.dc</span></span>
+      <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span>
+    </a>
+  </nav>
+
+  <!-- ── О КОМПАНИИ ── -->
+  <section class="sec">
+    <p class="sec-eyebrow">О компании</p>
+    <div class="card">
+      <h2>DC Bakery — B2B поставщик еды в Казахстане</h2>
+      <p>Мы специализируемся на поставках продуктов питания для B2B-сегмента: кофеен, ресторанов, гостиниц и магазинов. Работаем с 50+ партнёрами по всему Казахстану.</p>
+      <div class="chips">
+        <span class="chip">🏭 Собственное производство</span>
+        <span class="chip">🥐 Пекарня и цех полуфабрикатов</span>
+        <span class="chip">🥩 Халал по мясной линейке</span>
+      </div>
+      <div class="gallery">
+        <img src="assets/p1.webp" alt="Испанский чизкейк" loading="lazy">
+        <img src="assets/p2.webp" alt="Дубайский десерт" loading="lazy">
+        <img src="assets/p3.webp" alt="Фисташковый рулет" loading="lazy">
+        <img src="assets/p4.webp" alt="Манты с говядиной" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ЧТО ПОСТАВЛЯЕМ ── -->
+  <section class="sec">
+    <p class="sec-eyebrow">Что поставляем</p>
+    <div class="supply">
+      <div><span class="em">🍰</span> Десерты и торты</div>
+      <div><span class="em">🥐</span> Выпечка</div>
+      <div><span class="em">🥟</span> Полуфабрикаты</div>
+      <div><span class="em">🥩</span> Мясо (халал)</div>
+    </div>
+    <div class="delivery">
+      <b>Доставка по Алматы:</b> вторник · четверг · суббота. Приём заявок до 18:00 накануне.<br>
+      Бесплатно от <b>15 000 ₸</b>, иначе 1 500–3 000 ₸.
+    </div>
+  </section>
+
+  <!-- ── КОНТАКТЫ ── -->
+  <section class="sec">
+    <p class="sec-eyebrow">Контакты</p>
+    <div class="card contacts">
+      <div class="crow">
+        <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+        <span class="cc"><small>Адрес</small><b>г. Алматы, ул. Жамбыла, 154</b></span>
+      </div>
+      <div class="crow">
+        <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+        <span class="cc"><small>Режим работы</small><b>Пн–Пт · 9:00–19:00</b></span>
+      </div>
+      <div class="crow">
+        <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+        <span class="cc"><small>Телефон</small><b><a href="tel:+77476940766">+7 747 694 07 66</a></b></span>
+      </div>
+      <div class="crow">
+        <span class="ci"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.6.2-.2.3-.7.9-.9 1.1-.1.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.2.2 2 3.1 5 4.3 2.4 1 2.4.7 2.9.6.5 0 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2zm0 18.3c-1.5 0-3-.4-4.3-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.3 8.3 0 1 1 12 20.3z"/></svg></span>
+        <span class="cc"><small>WhatsApp</small><b><a href="https://wa.me/77477272650" target="_blank" rel="noopener">+7 747 727 26 50</a></b></span>
+      </div>
+      <div class="crow">
+        <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+        <span class="cc"><small>E-mail</small><b><a href="mailto:info@dc-bakery.kz">info@dc-bakery.kz</a></b></span>
+      </div>
+      <div class="crow">
+        <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/><circle cx="12" cy="12" r="10"/></svg></span>
+        <span class="cc"><small>Сайт</small><b><a href="https://dc-bakery.kz" target="_blank" rel="noopener">dc-bakery.kz</a></b></span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="fl">DC Bakery</span> by del Cappuccino<br>
+    © 2026 · B2B-поставки · Алматы, Казахстан
+  </footer>
+
+</div>
+</body>
+</html>
