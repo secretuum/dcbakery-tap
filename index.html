@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="kk">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DC Bakery — B2B-поставки для заведений · Алматы</title>
-<meta name="description" content="DC Bakery by del Cappuccino — оптовые поставки десертов, выпечки, полуфабрикатов и мяса (халал) для кофеен, ресторанов, отелей и магазинов. Алматы и Казахстан.">
+<title>DC Bakery — мекемелерге B2B-жеткізу · Алматы</title>
+<meta name="description" content="DC Bakery by del Cappuccino — кофеханаларға, мейрамханаларға, қонақүйлерге және дүкендерге десерттер, наубайхана өнімдері, жартылай фабрикаттар және халал ет көтерме жеткізу. Алматы. ҚАЗ · РУС · ENG.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,8 +12,8 @@
 <link rel="apple-touch-icon" href="assets/icon.png">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tap.dc-bakery.kz/">
-<meta property="og:title" content="DC Bakery — B2B-поставки для заведений">
-<meta property="og:description" content="Десерты, выпечка, полуфабрикаты и мясо (халал) оптом для кофеен, ресторанов и магазинов. Алматы и Казахстан.">
+<meta property="og:title" content="DC Bakery — мекемелерге B2B-жеткізу">
+<meta property="og:description" content="Кофеханаларға, мейрамханаларға және дүкендерге десерттер, наубайхана өнімдері, жартылай фабрикаттар және халал ет көтерме. Алматы.">
 <meta property="og:image" content="https://tap.dc-bakery.kz/assets/logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <style>
@@ -35,12 +35,19 @@ body{
 a{color:inherit;text-decoration:none}
 .wrap{max-width:480px;margin:0 auto;padding:0 20px 48px}
 
+/* ── LANG BAR ──────────────────────────── */
+.langbar{position:sticky;top:0;z-index:100;display:flex;justify-content:center;padding:9px 0;background:color-mix(in srgb,var(--cream) 86%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.lang-switch{display:inline-flex;gap:3px;background:#fff;border:1px solid var(--line);border-radius:99px;padding:3px;box-shadow:0 4px 16px -8px rgba(124,22,86,.35)}
+.lang-btn{border:0;background:transparent;color:var(--ink-2);font-family:Montserrat,sans-serif;font-weight:700;font-size:12px;letter-spacing:.03em;padding:6px 13px;border-radius:99px;cursor:pointer;transition:background .15s,color .15s}
+.lang-btn:hover{color:var(--berry)}
+.lang-btn.on{background:var(--berry);color:#fff}
+
 /* ── HERO ──────────────────────────────── */
-.hero{position:relative;text-align:center;padding:34px 0 8px}
+.hero{position:relative;text-align:center;padding:22px 0 8px}
 .hero::before{
-  content:'';position:absolute;top:-40px;left:50%;transform:translateX(-50%);
+  content:'';position:absolute;top:-30px;left:50%;transform:translateX(-50%);
   width:340px;height:340px;border-radius:50%;
-  background:radial-gradient(circle, rgba(241,150,141,.45), rgba(241,150,141,0) 70%);
+  background:radial-gradient(circle, rgba(241,150,141,.42), rgba(241,150,141,0) 70%);
   z-index:0;pointer-events:none;
 }
 .hero > *{position:relative;z-index:1}
@@ -95,7 +102,6 @@ h1{font-size:24px;font-weight:800;line-height:1.18;letter-spacing:-.01em;color:v
 .card p{font-size:13.5px;color:var(--ink-2);line-height:1.6}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .chip{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;color:var(--berry);background:var(--cream-2);border:1px solid var(--line);border-radius:99px;padding:7px 12px}
-.chip svg{width:13px;height:13px}
 
 /* ── GALLERY ───────────────────────────── */
 .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}
@@ -126,18 +132,27 @@ footer .fl{color:var(--berry);font-weight:700}
 </style>
 </head>
 <body>
+
+<div class="langbar">
+  <div class="lang-switch" role="group" aria-label="Тіл / Язык / Language">
+    <button class="lang-btn on" data-lang="kk" onclick="setLang('kk')">ҚАЗ</button>
+    <button class="lang-btn" data-lang="ru" onclick="setLang('ru')">РУС</button>
+    <button class="lang-btn" data-lang="en" onclick="setLang('en')">ENG</button>
+  </div>
+</div>
+
 <div class="wrap">
 
   <header class="hero">
     <img class="logo" src="assets/logo.png" alt="DC Bakery by del Cappuccino">
-    <div class="eyebrow"><span class="dot"></span> B2B-поставки · Алматы</div>
-    <h1>Оптовая пекарня<br>для кофеен и ресторанов</h1>
-    <p class="lead">Десерты, выпечка, полуфабрикаты и мясо халал — собственное производство. Доставка по Алматы.</p>
+    <div class="eyebrow"><span class="dot"></span> <span data-i18n="hero_eyebrow">B2B-жеткізу · Алматы</span></div>
+    <h1 data-i18n="title">Кофеханалар мен мейрамханаларға көтерме наубайхана</h1>
+    <p class="lead" data-i18n="lead">Десерттер, наубайхана өнімдері, жартылай фабрикаттар және халал ет — өз өндірісіміз. Алматы бойынша жеткізу.</p>
 
     <div class="stats">
-      <div class="stat"><b>50+</b><span>партнёров в РК</span></div>
-      <div class="stat"><b>Халал</b><span>мясная линейка</span></div>
-      <div class="stat"><b>100%</b><span>своё производство</span></div>
+      <div class="stat"><b>50+</b><span data-i18n="stat1_s">ҚР бойынша серіктес</span></div>
+      <div class="stat"><b data-i18n="stat2_b">Халал</b><span data-i18n="stat2_s">ет желісі</span></div>
+      <div class="stat"><b>100%</b><span data-i18n="stat3_s">өз өндірісіміз</span></div>
     </div>
   </header>
 
@@ -145,19 +160,19 @@ footer .fl{color:var(--berry);font-weight:700}
   <nav class="links">
     <a class="link primary" href="https://dc-bakery.kz" target="_blank" rel="noopener">
       <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span>
-      <span class="tx"><b>Сайт и каталог</b><span>Оптовые цены, остатки, заказ онлайн</span></span>
+      <span class="tx"><b data-i18n="link_site_b">Сайт және каталог</b><span data-i18n="link_site_s">Көтерме бағалар, қалдықтар, онлайн тапсырыс</span></span>
       <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span>
     </a>
 
-    <a class="link wa" href="https://wa.me/77477272650?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%B8%D1%88%D1%83%20%D0%B8%D0%B7%20Instagram%20%E2%80%94%20%D1%85%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%20%D0%BE%D0%BF%D1%82%D0%BE%D0%B2%D1%8B%D0%B5%20%D0%BF%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B8%20DC%20Bakery." target="_blank" rel="noopener">
+    <a id="wa-main" class="link wa" href="https://wa.me/77477272650" target="_blank" rel="noopener">
       <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.6.2-.2.3-.7.9-.9 1.1-.1.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.2.2 2 3.1 5 4.3.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.3z"/><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2zm0 18.3c-1.5 0-3-.4-4.3-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.3 8.3 0 1 1 12 20.3z"/></svg></span>
-      <span class="tx"><b>Написать в WhatsApp</b><span>Заказ и вопросы менеджеру</span></span>
+      <span class="tx"><b data-i18n="link_wa_b">WhatsApp-қа жазу</b><span data-i18n="link_wa_s">Тапсырыс және сұрақтар менеджерге</span></span>
       <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span>
     </a>
 
     <a class="link ghost" href="tel:+77476940766">
       <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
-      <span class="tx"><b>Позвонить</b><span>+7 747 694 07 66</span></span>
+      <span class="tx"><b data-i18n="link_call_b">Қоңырау шалу</b><span>+7 747 694 07 66</span></span>
       <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span>
     </a>
 
@@ -170,75 +185,170 @@ footer .fl{color:var(--berry);font-weight:700}
 
   <!-- ── О КОМПАНИИ ── -->
   <section class="sec">
-    <p class="sec-eyebrow">О компании</p>
+    <p class="sec-eyebrow" data-i18n="about_eyebrow">Компания туралы</p>
     <div class="card">
-      <h2>DC Bakery — B2B поставщик еды в Казахстане</h2>
-      <p>Мы специализируемся на поставках продуктов питания для B2B-сегмента: кофеен, ресторанов, гостиниц и магазинов. Работаем с 50+ партнёрами по всему Казахстану.</p>
+      <h2 data-i18n="about_h2">DC Bakery — Қазақстандағы B2B азық-түлік жеткізушісі</h2>
+      <p data-i18n="about_p">Біз B2B сегментіне — кофеханаларға, мейрамханаларға, қонақүйлерге және дүкендерге азық-түлік жеткізуге маманданғанбыз. Қазақстан бойынша 50+ серіктеспен жұмыс істейміз.</p>
       <div class="chips">
-        <span class="chip">Собственное производство</span>
-        <span class="chip">Пекарня и цех полуфабрикатов</span>
-        <span class="chip">Халал по мясной линейке</span>
+        <span class="chip" data-i18n="chip1">Меншікті өндіріс</span>
+        <span class="chip" data-i18n="chip2">Наубайхана және жартылай фабрикаттар цехы</span>
+        <span class="chip" data-i18n="chip3">Ет желісі бойынша халал</span>
       </div>
       <div class="gallery">
         <img src="assets/p1.webp" alt="Испанский чизкейк" loading="lazy">
         <img src="assets/p2.webp" alt="Дубайский десерт" loading="lazy">
         <img src="assets/p3.webp" alt="Фисташковый рулет" loading="lazy">
-        <img src="assets/p4.webp" alt="Манты с говядиной" loading="lazy">
+        <img src="assets/p4.webp" alt="Манты" loading="lazy">
       </div>
     </div>
   </section>
 
   <!-- ── ЧТО ПОСТАВЛЯЕМ ── -->
   <section class="sec">
-    <p class="sec-eyebrow">Что поставляем</p>
+    <p class="sec-eyebrow" data-i18n="supply_eyebrow">Не жеткіземіз</p>
     <div class="supply">
-      <div><span class="dotm"></span>Десерты и торты</div>
-      <div><span class="dotm"></span>Выпечка</div>
-      <div><span class="dotm"></span>Полуфабрикаты</div>
-      <div><span class="dotm"></span>Мясо (халал)</div>
+      <div><span class="dotm"></span><span data-i18n="supply1">Десерттер мен торттар</span></div>
+      <div><span class="dotm"></span><span data-i18n="supply2">Наубайхана өнімдері</span></div>
+      <div><span class="dotm"></span><span data-i18n="supply3">Жартылай фабрикаттар</span></div>
+      <div><span class="dotm"></span><span data-i18n="supply4">Ет (халал)</span></div>
     </div>
-    <div class="delivery">
-      <b>Доставка по Алматы:</b> вторник · четверг · суббота. Приём заявок до 18:00 накануне.<br>
-      Бесплатно от <b>15 000 ₸</b>, иначе 1 500–3 000 ₸.
+    <div class="delivery" data-i18n-html="delivery">
+      <b>Алматы бойынша жеткізу:</b> сейсенбі · бейсенбі · сенбі. Тапсырыстар алдыңғы күні 18:00-ге дейін қабылданады.<br>15 000 ₸-ден <b>тегін</b>, әйтпесе 1 500–3 000 ₸.
     </div>
   </section>
 
   <!-- ── КОНТАКТЫ ── -->
   <section class="sec">
-    <p class="sec-eyebrow">Контакты</p>
+    <p class="sec-eyebrow" data-i18n="contacts_eyebrow">Байланыс</p>
     <div class="card contacts">
       <div class="crow">
         <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-        <span class="cc"><small>Адрес</small><b>г. Алматы, ул. Жамбыла, 154</b></span>
+        <span class="cc"><small data-i18n="c_addr_l">Мекенжай</small><b data-i18n="c_addr_v">Алматы қ., Жамбыл к-сі, 154</b></span>
       </div>
       <div class="crow">
         <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
-        <span class="cc"><small>Режим работы</small><b>Пн–Пт · 9:00–19:00</b></span>
+        <span class="cc"><small data-i18n="c_hours_l">Жұмыс режимі</small><b data-i18n="c_hours_v">Дс–Жм · 9:00–19:00</b></span>
       </div>
       <div class="crow">
         <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
-        <span class="cc"><small>Телефон</small><b><a href="tel:+77476940766">+7 747 694 07 66</a></b></span>
+        <span class="cc"><small data-i18n="c_phone_l">Телефон</small><b><a href="tel:+77476940766">+7 747 694 07 66</a></b></span>
       </div>
       <div class="crow">
         <span class="ci"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.6.2-.2.3-.7.9-.9 1.1-.1.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.2.2 2 3.1 5 4.3 2.4 1 2.4.7 2.9.6.5 0 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2zm0 18.3c-1.5 0-3-.4-4.3-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.3 8.3 0 1 1 12 20.3z"/></svg></span>
-        <span class="cc"><small>WhatsApp</small><b><a href="https://wa.me/77477272650" target="_blank" rel="noopener">+7 747 727 26 50</a></b></span>
+        <span class="cc"><small data-i18n="c_wa_l">WhatsApp</small><b><a href="https://wa.me/77477272650" target="_blank" rel="noopener">+7 747 727 26 50</a></b></span>
       </div>
       <div class="crow">
         <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
-        <span class="cc"><small>E-mail</small><b><a href="mailto:info@dc-bakery.kz">info@dc-bakery.kz</a></b></span>
+        <span class="cc"><small data-i18n="c_email_l">E-mail</small><b><a href="mailto:info@dc-bakery.kz">info@dc-bakery.kz</a></b></span>
       </div>
       <div class="crow">
         <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/><circle cx="12" cy="12" r="10"/></svg></span>
-        <span class="cc"><small>Сайт</small><b><a href="https://dc-bakery.kz" target="_blank" rel="noopener">dc-bakery.kz</a></b></span>
+        <span class="cc"><small data-i18n="c_site_l">Сайт</small><b><a href="https://dc-bakery.kz" target="_blank" rel="noopener">dc-bakery.kz</a></b></span>
       </div>
     </div>
   </section>
 
   <footer>
     <span class="fl">DC Bakery</span> by del Cappuccino<br>
-    © 2026 · B2B-поставки · Алматы, Казахстан
+    <span data-i18n="footer_line">© 2026 · B2B-жеткізу · Алматы, Қазақстан</span>
   </footer>
 
 </div>
+
+<script>
+const I18N = {
+  kk: {
+    pageTitle:"DC Bakery — мекемелерге B2B-жеткізу · Алматы",
+    hero_eyebrow:"B2B-жеткізу · Алматы",
+    title:"Кофеханалар мен мейрамханаларға көтерме наубайхана",
+    lead:"Десерттер, наубайхана өнімдері, жартылай фабрикаттар және халал ет — өз өндірісіміз. Алматы бойынша жеткізу.",
+    stat1_s:"ҚР бойынша серіктес", stat2_b:"Халал", stat2_s:"ет желісі", stat3_s:"өз өндірісіміз",
+    link_site_b:"Сайт және каталог", link_site_s:"Көтерме бағалар, қалдықтар, онлайн тапсырыс",
+    link_wa_b:"WhatsApp-қа жазу", link_wa_s:"Тапсырыс және сұрақтар менеджерге",
+    link_call_b:"Қоңырау шалу",
+    about_eyebrow:"Компания туралы",
+    about_h2:"DC Bakery — Қазақстандағы B2B азық-түлік жеткізушісі",
+    about_p:"Біз B2B сегментіне — кофеханаларға, мейрамханаларға, қонақүйлерге және дүкендерге азық-түлік жеткізуге маманданғанбыз. Қазақстан бойынша 50+ серіктеспен жұмыс істейміз.",
+    chip1:"Меншікті өндіріс", chip2:"Наубайхана және жартылай фабрикаттар цехы", chip3:"Ет желісі бойынша халал",
+    supply_eyebrow:"Не жеткіземіз",
+    supply1:"Десерттер мен торттар", supply2:"Наубайхана өнімдері", supply3:"Жартылай фабрикаттар", supply4:"Ет (халал)",
+    delivery:"<b>Алматы бойынша жеткізу:</b> сейсенбі · бейсенбі · сенбі. Тапсырыстар алдыңғы күні 18:00-ге дейін қабылданады.<br>15 000 ₸-ден <b>тегін</b>, әйтпесе 1 500–3 000 ₸.",
+    contacts_eyebrow:"Байланыс",
+    c_addr_l:"Мекенжай", c_addr_v:"Алматы қ., Жамбыл к-сі, 154",
+    c_hours_l:"Жұмыс режимі", c_hours_v:"Дс–Жм · 9:00–19:00",
+    c_phone_l:"Телефон", c_wa_l:"WhatsApp", c_email_l:"E-mail", c_site_l:"Сайт",
+    footer_line:"© 2026 · B2B-жеткізу · Алматы, Қазақстан",
+    waText:"Сәлеметсіз бе! Instagram арқылы жазып тұрмын — DC Bakery көтерме жеткізуі туралы білгім келеді."
+  },
+  ru: {
+    pageTitle:"DC Bakery — B2B-поставки для заведений · Алматы",
+    hero_eyebrow:"B2B-поставки · Алматы",
+    title:"Оптовая пекарня для кофеен и ресторанов",
+    lead:"Десерты, выпечка, полуфабрикаты и мясо халал — собственное производство. Доставка по Алматы.",
+    stat1_s:"партнёров в РК", stat2_b:"Халал", stat2_s:"мясная линейка", stat3_s:"своё производство",
+    link_site_b:"Сайт и каталог", link_site_s:"Оптовые цены, остатки, заказ онлайн",
+    link_wa_b:"Написать в WhatsApp", link_wa_s:"Заказ и вопросы менеджеру",
+    link_call_b:"Позвонить",
+    about_eyebrow:"О компании",
+    about_h2:"DC Bakery — B2B поставщик еды в Казахстане",
+    about_p:"Мы специализируемся на поставках продуктов питания для B2B-сегмента: кофеен, ресторанов, гостиниц и магазинов. Работаем с 50+ партнёрами по всему Казахстану.",
+    chip1:"Собственное производство", chip2:"Пекарня и цех полуфабрикатов", chip3:"Халал по мясной линейке",
+    supply_eyebrow:"Что поставляем",
+    supply1:"Десерты и торты", supply2:"Выпечка", supply3:"Полуфабрикаты", supply4:"Мясо (халал)",
+    delivery:"<b>Доставка по Алматы:</b> вторник · четверг · суббота. Приём заявок до 18:00 накануне.<br>Бесплатно от <b>15 000 ₸</b>, иначе 1 500–3 000 ₸.",
+    contacts_eyebrow:"Контакты",
+    c_addr_l:"Адрес", c_addr_v:"г. Алматы, ул. Жамбыла, 154",
+    c_hours_l:"Режим работы", c_hours_v:"Пн–Пт · 9:00–19:00",
+    c_phone_l:"Телефон", c_wa_l:"WhatsApp", c_email_l:"E-mail", c_site_l:"Сайт",
+    footer_line:"© 2026 · B2B-поставки · Алматы, Казахстан",
+    waText:"Здравствуйте! Пишу из Instagram — хочу узнать про оптовые поставки DC Bakery."
+  },
+  en: {
+    pageTitle:"DC Bakery — B2B supply for businesses · Almaty",
+    hero_eyebrow:"B2B supply · Almaty",
+    title:"Wholesale bakery for cafés and restaurants",
+    lead:"Desserts, pastries, semi-finished products and halal meat — our own production. Delivery across Almaty.",
+    stat1_s:"partners in KZ", stat2_b:"Halal", stat2_s:"meat line", stat3_s:"own production",
+    link_site_b:"Website & catalog", link_site_s:"Wholesale prices, stock, order online",
+    link_wa_b:"Message on WhatsApp", link_wa_s:"Orders and questions to a manager",
+    link_call_b:"Call",
+    about_eyebrow:"About the company",
+    about_h2:"DC Bakery — a B2B food supplier in Kazakhstan",
+    about_p:"We specialize in food supply for the B2B segment: cafés, restaurants, hotels and shops. We work with 50+ partners across Kazakhstan.",
+    chip1:"Own production", chip2:"Bakery and semi-finished workshop", chip3:"Halal meat line",
+    supply_eyebrow:"What we supply",
+    supply1:"Desserts & cakes", supply2:"Pastries", supply3:"Semi-finished", supply4:"Meat (halal)",
+    delivery:"<b>Delivery across Almaty:</b> Tue · Thu · Sat. Orders accepted until 18:00 the day before.<br>Free from <b>15 000 ₸</b>, otherwise 1 500–3 000 ₸.",
+    contacts_eyebrow:"Contacts",
+    c_addr_l:"Address", c_addr_v:"Almaty, Zhambyl St., 154",
+    c_hours_l:"Working hours", c_hours_v:"Mon–Fri · 9:00–19:00",
+    c_phone_l:"Phone", c_wa_l:"WhatsApp", c_email_l:"E-mail", c_site_l:"Website",
+    footer_line:"© 2026 · B2B supply · Almaty, Kazakhstan",
+    waText:"Hello! I'm writing from Instagram — I'd like to know about DC Bakery wholesale supply."
+  }
+};
+
+function setLang(lang){
+  const d = I18N[lang] || I18N.kk;
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    const k = el.getAttribute('data-i18n');
+    if(d[k] !== undefined) el.textContent = d[k];
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(function(el){
+    const k = el.getAttribute('data-i18n-html');
+    if(d[k] !== undefined) el.innerHTML = d[k];
+  });
+  document.querySelectorAll('.lang-btn').forEach(function(b){
+    b.classList.toggle('on', b.getAttribute('data-lang') === lang);
+  });
+  const wa = document.getElementById('wa-main');
+  if(wa && d.waText) wa.href = 'https://wa.me/77477272650?text=' + encodeURIComponent(d.waText);
+  if(d.pageTitle) document.title = d.pageTitle;
+}
+
+/* Всегда открываемся на казахском */
+setLang('kk');
+</script>
 </body>
 </html>
